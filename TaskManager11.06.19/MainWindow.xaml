@@ -1,0 +1,56 @@
+﻿<Window x:Class="TaskManager11._06._19.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManager11._06._19"
+        xmlns:taskbar="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="560">
+    <!--<Window.CommandBindings>
+        <CommandBinding Command="Open" Executed="OpenExecute" />
+    </Window.CommandBindings>-->
+    <Grid>
+        <Separator Margin="0,80,0,0" Height="30" VerticalAlignment="Top"/>
+
+        <Grid Name="mailDateGrid" IsEnabled="False" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="550">
+            <ComboBox x:Name="TypeComboBox" FontSize="15" Margin="169,40,291,0" VerticalAlignment="Top" Height="23" />
+            <DatePicker FontSize="15" x:Name="startDate" Margin="283,17,131,0" VerticalAlignment="Top" Height="30"/>
+            <Label FontSize="15" Content="Starting at - " Margin="10,20,446,0" RenderTransformOrigin="-0.079,0.115" Height="30" VerticalAlignment="Top"/>
+            <DatePicker FontSize="15" x:Name="endDate" Margin="283,55,131,0" VerticalAlignment="Top" Height="25"/>
+            <Label FontSize="15" Content="Ending at - " Margin="8,55,446,0" RenderTransformOrigin="-0.079,0.115" Height="30" VerticalAlignment="Top"/>
+            <TextBox FontSize="15" x:Name="startTime"  HorizontalAlignment="Left" Height="29" Margin="109,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+            <TextBox FontSize="15" x:Name="endTime" HorizontalAlignment="Left" Height="29" Margin="109,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+        </Grid>
+        <Grid Name="mailGrid" IsEnabled="False" HorizontalAlignment="Left" Height="278" Margin="0,91,0,0" VerticalAlignment="Top" Width="200">
+            <TextBox x:Name="toTextBox" Margin="10,54,52,0" TextWrapping="Wrap" Height="32" VerticalAlignment="Top" RenderTransformOrigin="0.522,0.125"/>
+            <TextBox x:Name="themeText" Margin="10,100,52,0" TextWrapping="Wrap" Height="30" VerticalAlignment="Top"/>
+            <RichTextBox BorderBrush="Black" Name="richTextBoxMessage" Margin="10,145,28,0" Height="118" VerticalAlignment="Top">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text="Write your message..."/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </Grid>
+        <Button Name="SendButton" Click="SendButtonClick" Content="Send" FontSize="20" HorizontalContentAlignment="Center" Margin="10,101,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+        <Grid Name="moveGrid" IsEnabled="False" HorizontalAlignment="Left" Height="268" Margin="200,101,0,0" VerticalAlignment="Top" Width="200">
+            <TextBox x:Name="fromPathDirectory" Margin="10,46,54,0" TextWrapping="Wrap" Height="32" VerticalAlignment="Top"/>
+            <TextBox x:Name="toPathDirectory" Margin="10,91,54,0" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5" Height="30" VerticalAlignment="Top"/>
+            <DatePicker FontSize="15" x:Name="dateToMove" Margin="19,165,34,0" VerticalAlignment="Top" Height="25"/>
+            <TextBox FontSize="15" x:Name="timeToMove" HorizontalAlignment="Left" Height="29" Margin="19,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+            <Label FontSize="15" Content="Execution  date" Margin="10,130,79,0" RenderTransformOrigin="-0.079,0.115" Height="30" VerticalAlignment="Top"/>
+        </Grid>
+        <Button Name="SaveButton" Click="SaveButtonClick" Content="Move" FontSize="20" HorizontalContentAlignment="Center" Margin="200,101,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+        <Grid IsEnabled="False" Name="downloadGrid" HorizontalAlignment="Left" Height="268" Margin="381,101,-29,0" VerticalAlignment="Top" Width="200">
+            <TextBox x:Name="fromPathDownload" Margin="14,47,52,0" TextWrapping="Wrap" Height="30" VerticalAlignment="Top"/>
+            <TextBox x:Name="toPathDownload" Margin="14,94,52,0" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5" Height="30" VerticalAlignment="Top"/>
+            <DatePicker FontSize="15" x:Name="dateToDownload" Margin="20,164,41,0" VerticalAlignment="Top" Height="25"/>
+            <TextBox FontSize="15" x:Name="timeToDownload" HorizontalAlignment="Left" Height="31" Margin="20,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+            <Label FontSize="15" Content="Execution  date " Margin="14,129,62,0" RenderTransformOrigin="-0.079,0.115" Height="30" VerticalAlignment="Top"/>
+        </Grid>
+        <Button Content="Download" FontSize="20" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" Margin="405,101,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+
+    </Grid>
+
+</Window>
