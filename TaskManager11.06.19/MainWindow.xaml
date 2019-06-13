@@ -7,9 +7,9 @@
         xmlns:taskbar="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="560">
-    <!--<Window.CommandBindings>
+    <Window.CommandBindings>
         <CommandBinding Command="Open" Executed="OpenExecute" />
-    </Window.CommandBindings>-->
+    </Window.CommandBindings>
     <Grid>
         <Separator Margin="0,80,0,0" Height="30" VerticalAlignment="Top"/>
 
@@ -34,22 +34,14 @@
             </RichTextBox>
         </Grid>
         <Button Name="SendButton" Click="SendButtonClick" Content="Send" FontSize="20" HorizontalContentAlignment="Center" Margin="10,101,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
-        <Grid Name="moveGrid" IsEnabled="False" HorizontalAlignment="Left" Height="268" Margin="200,101,0,0" VerticalAlignment="Top" Width="200">
-            <TextBox x:Name="fromPathDirectory" Margin="10,46,54,0" TextWrapping="Wrap" Height="32" VerticalAlignment="Top"/>
-            <TextBox x:Name="toPathDirectory" Margin="10,91,54,0" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5" Height="30" VerticalAlignment="Top"/>
-            <DatePicker FontSize="15" x:Name="dateToMove" Margin="19,165,34,0" VerticalAlignment="Top" Height="25"/>
+        <Grid Name="moveGrid" IsEnabled="False" HorizontalAlignment="Left" Height="268" Margin="312,99,0,0" VerticalAlignment="Top" Width="200">
+            <TextBox x:Name="fromPathDirectory" Margin="9,46,55,0" TextWrapping="Wrap" Height="32" VerticalAlignment="Top"/>
+            <TextBox x:Name="toPathDirectory" Margin="9,91,55,0" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5" Height="30" VerticalAlignment="Top"/>
+            <DatePicker FontSize="15" x:Name="dateToMove" Margin="16,165,37,0" VerticalAlignment="Top" Height="25"/>
             <TextBox FontSize="15" x:Name="timeToMove" HorizontalAlignment="Left" Height="29" Margin="19,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
-            <Label FontSize="15" Content="Execution  date" Margin="10,130,79,0" RenderTransformOrigin="-0.079,0.115" Height="30" VerticalAlignment="Top"/>
+            <Label FontSize="15" Content="Execution  date" Margin="9,130,80,0" RenderTransformOrigin="-0.079,0.115" Height="30" VerticalAlignment="Top"/>
         </Grid>
-        <Button Name="SaveButton" Click="SaveButtonClick" Content="Move" FontSize="20" HorizontalContentAlignment="Center" Margin="200,101,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
-        <Grid IsEnabled="False" Name="downloadGrid" HorizontalAlignment="Left" Height="268" Margin="381,101,-29,0" VerticalAlignment="Top" Width="200">
-            <TextBox x:Name="fromPathDownload" Margin="14,47,52,0" TextWrapping="Wrap" Height="30" VerticalAlignment="Top"/>
-            <TextBox x:Name="toPathDownload" Margin="14,94,52,0" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5" Height="30" VerticalAlignment="Top"/>
-            <DatePicker FontSize="15" x:Name="dateToDownload" Margin="20,164,41,0" VerticalAlignment="Top" Height="25"/>
-            <TextBox FontSize="15" x:Name="timeToDownload" HorizontalAlignment="Left" Height="31" Margin="20,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
-            <Label FontSize="15" Content="Execution  date " Margin="14,129,62,0" RenderTransformOrigin="-0.079,0.115" Height="30" VerticalAlignment="Top"/>
-        </Grid>
-        <Button Content="Download" FontSize="20" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" Margin="405,101,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+        <Button Name="SaveButton" Click="SaveButtonClick" Content="Move" FontSize="20" HorizontalContentAlignment="Center" Margin="320,102,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
 
     </Grid>
 
